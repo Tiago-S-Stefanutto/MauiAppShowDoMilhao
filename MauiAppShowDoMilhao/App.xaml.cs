@@ -4,7 +4,7 @@ namespace MauiAppShowDoMilhao
 {
     public partial class App : Application
     {
-        List<Pergunta> perguntas_faceis = new()
+        static List<Pergunta> perguntas_faceis = new()
         {
             new Pergunta
             {
@@ -247,6 +247,14 @@ namespace MauiAppShowDoMilhao
                 }
             },
         };
+        public static Pergunta getRandomPerguntaFacil()
+        {
+            Random r = new Random();
+
+            int sorteado = r.Next(1, 20);
+
+            return perguntas_faceis[sorteado];
+        }
         List<Pergunta> perguntas_medias = new()
         {
             new Pergunta
