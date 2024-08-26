@@ -255,7 +255,7 @@ namespace MauiAppShowDoMilhao
 
             return perguntas_faceis[sorteado];
         }
-        List<Pergunta> perguntas_medias = new()
+        static List<Pergunta> perguntas_medias = new()
         {
             new Pergunta
             {
@@ -498,7 +498,15 @@ namespace MauiAppShowDoMilhao
                 }
             },
         };
-        List<Pergunta> perguntas_dificeis = new()
+        public static Pergunta getRandomPerguntaMedias()
+        {
+            Random r = new Random();
+
+            int sorteado = r.Next(1, 20);
+
+            return perguntas_medias[sorteado];
+        }
+        static List<Pergunta> perguntas_dificeis = new()
         {
             new Pergunta
             {
@@ -741,5 +749,13 @@ namespace MauiAppShowDoMilhao
                 }
             },
         };
+        public static Pergunta getRandomPerguntaDific()
+        {
+            Random r = new Random();
+
+            int sorteado = r.Next(1, 20);
+
+            return perguntas_dificeis[sorteado];
+        }
     }
 }
