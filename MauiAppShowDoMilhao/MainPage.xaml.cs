@@ -1,4 +1,7 @@
-﻿namespace MauiAppShowDoMilhao
+﻿using MauiAppShowDoMilhao.Models;
+using Plugin.Maui.Audio;
+
+namespace MauiAppShowDoMilhao
 {
     public partial class MainPage : ContentPage
     {
